@@ -1,10 +1,12 @@
 import React from "react";
 
+// EXCLUDED FROM THE PORTFOLIO, FOR NOW!
+
 function experience(){
     return(
         <div>
         <div class="page-header text-center p-4">
-          <br/><h2>Experience</h2><hr/><br/>
+          <br/><h2>EXPERIENCE</h2><hr/><br/>
         </div>
         <div className="d-flex">
         <div className="card border-light mb-6">

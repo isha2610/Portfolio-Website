@@ -1,51 +1,56 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+import image from './vag-card-image.jpg';
+import pawnshop from './pawn shop.jpg'
+import extention from './chrome-extention.jpg';
+import chatbot from './chatbot.jpg';
 
 function Projects(){
     return(
   <div>
     <div class="page-header text-center p-4">
-      <br/><h2>Portfolio</h2><hr/><br/>
+      <br/><h2>PORTFOLIO</h2><hr/><br/>
     </div>
     {/* projects here */}
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
+<div class="row row-cols-1 row-cols-md-2"> 
+  <div class="col p-4">
     <div class="card">
-      <img src="portfolio\public\vag-card-image.jpg" class="card-img-top" alt="vag-card-image"/>
+      <a href="https://github.com/isha2610"><img src={image} class="card-img-top" width={250} height={250} alt="vag-card-image"/></a>
       <div class="card-body">
         <h5 class="card-title">Virtual Art Gallery</h5>
         <p class="card-text">A react app built with bootstrap which uploads and retrieves images and metadata using Java and Azure Blob Storage</p>
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col p-4">
     <div class="card">
-      <img src="./public/logo192.png" class="card-img-top" alt="..."/>
+    <a href="https://github.com/isha2610"><img src={pawnshop} class="card-img-top" width={250} height={250} alt="pawn-shop website"/></a>
       <div class="card-body">
         <h5 class="card-title">Pawn Shop Website</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col p-4">
     <div class="card">
-      <img src="..." class="card-img-top" alt="openai-chatbot"/>
+    <a href="https://github.com/isha2610"><img src={extention} class="card-img-top" width={250} height={300} alt="openai-chatbot"/></a>
       <div class="card-body">
-        <h5 class="card-title">Chatbot</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Pun Fun - A Chrome Extension</h5>
+        <p class="card-text">A chrome extension built on CSS and JavaScript using third party API which fetches the required fields from JSON data and display them.</p>
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col p-4">
     <div class="card">
-      <img src="..." class="card-img-top" alt="dje-chr-ext"/>
+    <a href="https://github.com/isha2610"><img src={chatbot} class="card-img-top" width={250} height={300} alt="dje-chr-ext"/></a>
       <div class="card-body">
-        <h5 class="card-title">Pun Fun - A Chrome Extension</h5>
+      <h5 class="card-title">Chatbot</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
 </div>
+<br/>
 </div>
 );
 };
