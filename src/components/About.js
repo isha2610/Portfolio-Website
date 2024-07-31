@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const About = () => {
   const handleDownload = () => {
     // Replace with the actual path to your resume file
-    const resumeUrl = 'C:/Users/Lenovo/Downloads/MyResume/MyResume/Portfolio/RESUME_ISHA.pdf';
-    window.open(resumeUrl, '_blank');
+    // const resumeUrl = 'C:/Users/Lenovo/Downloads/MyResume/MyResume/Portfolio/RESUME_ISHA.pdf';
+    // window.open(resumeUrl, '_blank');
   };
   return (
     // <div class="jumbotron">

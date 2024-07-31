@@ -1,9 +1,9 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import image from './vag-card-image.jpg';
-import pawnshop from './pawn shop.jpg'
-import extention from './chrome-extention.jpg';
-import chatbot from './chatbot.jpg';
+import image from '../assets/vag-card-image.jpg';
+import pawnshop from '../assets/pawn shop.jpg'
+import extention from '../assets/chrome-extention.jpg';
+import chatbot from '../assets/chatbot.jpg';
 
 function Projects(){
     return(

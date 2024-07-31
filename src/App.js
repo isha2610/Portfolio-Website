@@ -14,7 +14,7 @@ import CollapsibleExample from './components/ResponsiveNavbarReact';
 function App() {
   return(
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <CollapsibleExample/>
       <PageThemeChange/>
       <About/>
