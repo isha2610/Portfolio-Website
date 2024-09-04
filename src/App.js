@@ -10,17 +10,19 @@ import ContactMe from './components/ContactMe';
 import Experience from './components/Experience';
 import Skill from './components/skills';
 import CollapsibleExample from './components/ResponsiveNavbarReact';
+import Learn from './components/learnCWH';
 
 function App() {
   return(
     <Router>
       {/* <Navbar /> */}
+      {/* <Learn title="Hey, I am Isha" searchBar={true}/> */}
       <CollapsibleExample/>
-      <PageThemeChange/>
+       <PageThemeChange/>
       <About/>
       <Skill/>
       <Projects/>
-      <ContactMe/>
+      <ContactMe/> 
       <Routes>
         <Route path="/" element={
           <>

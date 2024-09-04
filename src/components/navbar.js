@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import { useState } from "react";
 
 // const theme = useState(PageThemeChange.detectSystemTheme());
-
+import Page from "./PageThemeChange";
 
 function Navbar() {
   return (

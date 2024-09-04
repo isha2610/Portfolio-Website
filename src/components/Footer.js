@@ -1,6 +1,13 @@
 import React from "react";
 
 function Footer() {
+
+  let footerStyle = {
+    position: "relative", 
+    top: "10vh",
+    width: "100%"
+  }
+
   const ButtonMailto = ({ mailto }) => {
     return (
         <a
@@ -14,7 +21,7 @@ function Footer() {
       );
     };
   return (
-    <div class="pt-4">
+    <div class="pt-4" style={footerStyle}>
         <footer class="text-center bg-body-tertiary pt-4">
   {/* <!-- Grid container --> */}
   <div class="container pt-4">
