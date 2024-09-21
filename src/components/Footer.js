@@ -62,8 +62,8 @@ function Footer() {
 
   {/* <!-- Copyright --> */}
   <div class="text-center p-3">
-    © 2020 Copyright: 
-    <a class="text-body" href="https://google.com">ISHA</a>
+    <p>© 2020 Copyright: &nbsp;
+    <a class="text-body" href="https://www.linkedin.com/in/isha-khurana-392224210/">ISHA</a></p>
   </div>
   {/* <!-- Copyright --> */}
 </footer>

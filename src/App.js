@@ -9,26 +9,20 @@ import ContactMe from './components/ContactMe';
 // import SignIn from "./components/SignIn";
 import Experience from './components/Experience';
 import Skill from './components/skills';
-import CollapsibleExample from './components/ResponsiveNavbarReact';
+import CollapsibleNavbar from './components/ResponsiveNavbarReact';
 import Learn from './components/learnCWH';
 
 function App() {
   return(
     <Router>
-      {/* <Navbar /> */}
-      {/* <Learn title="Hey, I am Isha" searchBar={true}/> */}
-      <CollapsibleExample/>
-       {/* <PageThemeChange/> */}
+
+      <CollapsibleNavbar/>
       <About/>
       <Skill/>
       <Projects/>
       <ContactMe/> 
       <Routes>
-        <Route path="/" element={
-          <>
-          {/* <HeroSection />
-          <ContactUs /> */}
-           </> } />
+        <Route path="/portfolio" element={<Projects/>} />
       
       {/* <Route path="/uploadFiles" element={<UploadFiles />} /> 
       <Route path="/gallery" element={<GalleryRetrieve />} /> 

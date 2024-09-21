@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function CollapsibleExample() {
+function CollapsibleNavbar() {
 
   const lightTheme = () => {
     document.body.dataset.bsTheme = 'light';
@@ -18,6 +19,8 @@ function CollapsibleExample() {
     document.body.dataset.bsTheme = theme;
   }
 
+  useState(systemTheme);
+  
   return (
     <Navbar collapseOnSelect expand="lg" className="sticky-top bg-body-tertiary">
       <Container>
@@ -25,7 +28,7 @@ function CollapsibleExample() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-          <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+          <Nav.Link to="/portfolio">Portfolio</Nav.Link>
           <Nav.Link href="#experience">Experience</Nav.Link>
           </Nav>
           <Nav>
@@ -36,7 +39,7 @@ function CollapsibleExample() {
             <NavDropdown title="Theme" id="collapsible-nav-dropdown">
               <NavDropdown.Item onClick={lightTheme} className="text-align-center"><i class="fa solid fa-sun"></i></NavDropdown.Item>
               <NavDropdown.Item onClick={darkTheme}><i class="fa solid fa-moon"></i></NavDropdown.Item>
-              <NavDropdown.Item onClick={systemTheme}><i class="fa solid fa-sun"></i></NavDropdown.Item>
+              <NavDropdown.Item onClick={systemTheme}><i class="fa solid fa-laptop"></i></NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -45,4 +48,4 @@ function CollapsibleExample() {
   );
 }
 
-export default CollapsibleExample;
+export default CollapsibleNavbar;
