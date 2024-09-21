@@ -18,7 +18,7 @@ function App() {
       {/* <Navbar /> */}
       {/* <Learn title="Hey, I am Isha" searchBar={true}/> */}
       <CollapsibleExample/>
-       <PageThemeChange/>
+       {/* <PageThemeChange/> */}
       <About/>
       <Skill/>
       <Projects/>
