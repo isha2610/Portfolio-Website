@@ -1,6 +1,7 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
-// EXCLUDED FROM THE PORTFOLIO, FOR NOW!
+// Work Experience
 
 function experience(){
     return(

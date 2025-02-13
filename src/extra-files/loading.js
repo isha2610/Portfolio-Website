@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Portfolio from './Portfolio'; // Your portfolio component
+import Project from './project'; // Your Project component
 import './App.css'; // Import your styles
+import {Link} from 'react-router-dom';
 
 function Loading() {
   const [loading, setLoading] = useState(true);
@@ -21,8 +22,8 @@ function Loading() {
         </div>
       ) : (
         <>
-          <img src="/loading-image.jpg" alt="Portfolio" className="fixed-image" />
-          <Portfolio />
+          <img src="/loading-image.jpg" alt="Project" className="fixed-image" />
+          <Project />
         </>
       )}
     </div>

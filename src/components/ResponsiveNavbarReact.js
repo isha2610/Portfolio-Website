@@ -3,6 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Link} from 'react-router-dom';
+
+// Navbar Duh!
 
 function CollapsibleNavbar() {
 
@@ -22,19 +25,22 @@ function CollapsibleNavbar() {
   useState(systemTheme);
   
   return (
+    <>
     <Navbar collapseOnSelect expand="lg" className="sticky-top bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home" style={{ fontSize: '2rem', fontFamily: 'cursive' }}>ISHA</Navbar.Brand>
+        <Navbar.Brand to="/" as={Link} style={{ fontSize: '2rem', fontFamily: 'cursive' }}>ISHA</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-          <Nav.Link to="/portfolio">Portfolio</Nav.Link>
-          <Nav.Link href="#experience">Experience</Nav.Link>
+          <Nav.Link to="/project" as={Link}>Projects</Nav.Link>
+          {/* <Nav.Link href='/project'>Projects</Nav.Link> */}
+
+          <Nav.Link to="/experience" as={Link}>Experience</Nav.Link>
           </Nav>
           <Nav>
             
-            <Nav.Link href="#">Learnings/Certifications</Nav.Link>
-            <Nav.Link href="#contact">Connect with Me</Nav.Link>
+            <Nav.Link href="/">Learnings/Certifications</Nav.Link>
+            <Nav.Link to="/contactme" as={Link}>Connect with Me</Nav.Link>
             
             <NavDropdown title="Theme" id="collapsible-nav-dropdown">
               <NavDropdown.Item onClick={lightTheme} className="text-align-center"><i class="fa solid fa-sun"></i></NavDropdown.Item>
@@ -45,6 +51,9 @@ function CollapsibleNavbar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
+</>
+
   );
 }
 

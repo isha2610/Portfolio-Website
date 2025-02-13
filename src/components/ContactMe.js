@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import {Link} from 'react-router-dom';
 
 // service id - service_o8ukegq
 // service_o8ukegq
+
+// Email Connect
 
 const ContactMe = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,8 +46,8 @@ const ContactMe = () => {
     return(
     <div>
         <div class="page-header text-center p-4">
-          <br/><br/><br/><h2>CONTACT ME</h2><hr/><br/>
-          <p style={{justifyItems:"center"}}>Hey, want to get your website built? <br/> Want to discuss about recruitment?<br/>Let's discuss here...</p>
+          <br/><br/><h2>CONTACT ME</h2><hr/><br/>
+          <p style={{justifyItems:"center"}}>Hey..! Would love to know more or have any feedback. Let's connect..!</p>
         </div>
       <div class="container-fluid d-flex justify-content-center">
         <div className="container-fluid d-flex justify-content-center flex-column align-items-center w-100">

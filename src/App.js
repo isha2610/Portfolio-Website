@@ -1,36 +1,38 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Navbar from './components/navbar';
-import Footer from './components/Footer';
-import About from './components/About';
-import Projects from './components/Projects';
-import PageThemeChange from './components/PageThemeChange';
-import ContactMe from './components/ContactMe';
-// import SignIn from "./components/SignIn";
-import Experience from './components/Experience';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import ContactMe from "./components/ContactMe";
+import Experience from "./components/Experience";
+import CollapsibleNavbar from "./components/ResponsiveNavbarReact";
 import Skill from './components/skills';
-import CollapsibleNavbar from './components/ResponsiveNavbarReact';
-import Learn from './components/learnCWH';
+import Footer from './components/Footer';
 
 function App() {
-  return(
+  return (
     <Router>
-
-      <CollapsibleNavbar/>
-      <About/>
-      <Skill/>
-      <Projects/>
-      <ContactMe/> 
+      {/* <Home /> */}
+      <CollapsibleNavbar />
       <Routes>
-        <Route path="/portfolio" element={<Projects/>} />
-      
-      {/* <Route path="/uploadFiles" element={<UploadFiles />} /> 
-      <Route path="/gallery" element={<GalleryRetrieve />} /> 
-      <Route path="/login" element={<SignIn />} /> */}
+        <Route
+          path="/"
+          element={
+            <>
+              <About />
+              {/* <Projects />
+              <ContactMe /> */}
+            </>
+          }
+        />
+        <Route path="/project" element={<Projects/>} />
+        <Route path="/experience" element={<Experience/>} />
+        <Route path="/contactme" element={<ContactMe/>} />
+        <Route path="/experience" element={<Experience/>} />
+        <Route path="/skill" element={<Skill/>} />
+
       </Routes>
-      <Footer />
-      </Router>
-      
+      {/* <Footer /> */}
+    </Router>
   );
-};
+}
 export default App;
