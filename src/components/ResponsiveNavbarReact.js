@@ -39,8 +39,8 @@ function CollapsibleNavbar() {
           </Nav>
           
           <Nav>
-            
-            <Nav.Link href="/skill">Learnings/Certifications</Nav.Link>
+            {/* learnings and certifications - skills */}
+            <Nav.Link href="/skill">Skills</Nav.Link> 
             <Nav.Link to="/contactme" as={Link}>Connect with Me</Nav.Link>
             
             <NavDropdown title="Theme" id="collapsible-nav-dropdown">

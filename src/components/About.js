@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Resume from "../assets/Isha_Resume.pdf";
-import {useTypewriter, Cursor, Typewriter} from "react-simple-typewriter";
+import {useTypewriter, Cursor} from "react-simple-typewriter";
 
 //Full Stack Developer
 
@@ -26,11 +26,8 @@ const About = () => {
               <Cursor cursorStyle="|" />
             </span>
           </h1>
-
         </div>
         
-
-
         <br />
         <p>
           A Full Stack Software Developer efficient in React JS, Java, MongoDB
@@ -59,8 +56,22 @@ const About = () => {
           </a>
           {/* rel="noopenner noreferrer" is for security vulnerability of target='_blank' */}
         </div>
+      
+      {/* <div>
+        <div class="rotater">
+          <div class="btn btn-icon">
+          <i class="fa fa-github"/></div>
+        </div>
+        <div class="rotater">
+          <div class="btn btn-icon">
+          <i class="fa fa-linkedin"/></div>
+        </div>
+        <div class="rotater">
+          <div class="btn btn-icon">
+          <i class="fa fa-github"/></div>
+        </div>
+      </div> */}
       </div>
-      <div>{/* Adding image here */}</div>
     </div>
   );
 };

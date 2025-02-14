@@ -16,7 +16,7 @@ function Projects(){
     return(
   <div>
     <div class="page-header text-center p-4">
-      <br/><h2>PROJECTS</h2><hr/><br/>
+      <h2>PROJECTS</h2><hr/><br/>
     </div>
     {/* projects here */}
 <div class="row row-cols-1 row-cols-md-2"> 
