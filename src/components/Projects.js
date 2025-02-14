@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import vag from '../assets/vag-card-image.jpg';
 import pawnshop from '../assets/pawn shop.jpg'
 import extention from '../assets/chrome-extention.jpg';
@@ -27,7 +27,7 @@ function Projects(){
       <div class="card-body" >
         <h5 class="card-title" className="margin: 0">Virtual Art Gallery</h5>
         <p class="card-text">A react app built with bootstrap which uploads and retrieves images and metadata using Java and Azure Blob Storage</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Virtual-Art-Gallery" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Virtual-Art-Gallery" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Image Slider - React JS *</h5>
         <p class="card-text">A chrome extension built on CSS and JavaScript using third party API which fetches the required fields from JSON data and display them.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Cruise Ship Management</h5>
         <p class="card-text">A chrome extension built on CSS and JavaScript using third party API which fetches the required fields from JSON data and display them.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Catering Reservation and Ordering System</h5>
         <p class="card-text">A chrome extension built on CSS and JavaScript using third party API which fetches the required fields from JSON data and display them.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Employee Record Management System</h5>
         <p class="card-text">A chrome extension built on CSS and JavaScript using third party API which fetches the required fields from JSON data and display them.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Image Slider</h5>
         <p class="card-text">A chrome extension built on CSS and JavaScript using third party API which fetches the required fields from JSON data and display them.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Pawn Shop Website</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -104,7 +104,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Mail Connect</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -115,7 +115,7 @@ function Projects(){
       <div class="card-body">
         <h5 class="card-title">Pun Fun - A Chrome Extension</h5>
         <p class="card-text">A chrome extension built on CSS and JavaScript using third party API which fetches the required fields from JSON data and display them.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>
@@ -126,7 +126,7 @@ function Projects(){
       <div class="card-body">
       <h5 class="card-title">Chatbot</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-        <h6> <a href="" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
+        <h6> <a href="/" style={linkStyles}>Deployed </a> | <a href="https://github.com/isha2610/Pawn-Shop-Website" style={linkStyles}>Github </a></h6>
       </div>
     </div>
   </div>

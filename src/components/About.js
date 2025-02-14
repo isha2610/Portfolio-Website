@@ -1,19 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Resume from "../assets/Isha__Resume.pdf";
+import Resume from "../assets/Isha_Resume.pdf";
+import {useTypewriter, Cursor, Typewriter} from "react-simple-typewriter";
 
 //Full Stack Developer
 
 const About = () => {
+
+  const [profile] = useTypewriter({
+    words: ['Isha Khurana', 'Software Engineer', 'Full Stack Developer'],
+    loop: false,
+    typeSpeed: 60,
+    deleteSpeed: 30,
+  })
+
   return (
-    <div class="jumbotron">
-      <div class="container fluid p-4">
-        <br />
-        <br />
-        <br />
-        <h1>
-          Full Stack Developer <br />
-        </h1>
+    <div className="jumbotron">
+      <div className="container fluid p-4">
+        <div className="py-4">
+
+          <h1 style={{marginTop:'50px'}}>
+            Hey! I am {' '}
+            <span style={{fontWeight: "bold", fontFamily: '-moz-initial', color: "#BB86FC" }}>
+              {profile}
+              <Cursor cursorStyle="|" />
+            </span>
+          </h1>
+
+        </div>
+        
+
+
         <br />
         <p>
           A Full Stack Software Developer efficient in React JS, Java, MongoDB

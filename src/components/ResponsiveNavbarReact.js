@@ -28,7 +28,7 @@ function CollapsibleNavbar() {
     <>
     <Navbar collapseOnSelect expand="lg" className="sticky-top bg-body-tertiary">
       <Container>
-        <Navbar.Brand to="/" as={Link} style={{ fontSize: '2rem', fontFamily: 'cursive' }}>ISHA</Navbar.Brand>
+        <Navbar.Brand to="/" as={Link} style={{ fontSize: '2rem', fontFamily: '-moz-initial' }}>ISHA</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -37,9 +37,10 @@ function CollapsibleNavbar() {
 
           <Nav.Link to="/experience" as={Link}>Experience</Nav.Link>
           </Nav>
+          
           <Nav>
             
-            <Nav.Link href="/">Learnings/Certifications</Nav.Link>
+            <Nav.Link href="/skill">Learnings/Certifications</Nav.Link>
             <Nav.Link to="/contactme" as={Link}>Connect with Me</Nav.Link>
             
             <NavDropdown title="Theme" id="collapsible-nav-dropdown">
