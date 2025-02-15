@@ -1,5 +1,4 @@
 import React from "react";
-import image1 from "./cpp.png";
 import cpp from "../assets/skills/cpp.png";
 import azure from "../assets/skills/azure.png";
 import Bitrix24 from "../assets/skills/Bitrix24.png";
