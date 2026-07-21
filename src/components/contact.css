@@ -1,0 +1,236 @@
+.contact-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 7rem 1.5rem;
+  color: #172033;
+}
+
+.contact-section__intro {
+  max-width: 680px;
+}
+
+.contact-section__eyebrow {
+  margin: 0 0 0.75rem;
+  color: #87679a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-section h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.contact-section__intro > p:last-child {
+  margin: 1.2rem 0 0;
+  color: #5b6678;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.contact-section__grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2.5rem;
+  margin-top: 3.25rem;
+}
+
+.contact-section__details {
+  display: grid;
+  align-content: start;
+  gap: 1.25rem;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #365d8d;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.coffee-chat {
+  display: flex;
+  gap: 1rem;
+  padding: 1.4rem;
+  border: 1px solid #ead9df;
+  border-radius: 0.9rem;
+  background: linear-gradient(135deg, #fffafb, #f9f6fc);
+}
+
+.coffee-chat__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  flex: 0 0 auto;
+  border-radius: 0.7rem;
+  background: #f5e7ed;
+  color: #a9677d;
+}
+
+.coffee-chat h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.coffee-chat p {
+  margin: 0.55rem 0;
+  color: #5b6678;
+  line-height: 1.6;
+}
+
+.coffee-chat a {
+  color: #8c609b;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.5rem;
+  border: 1px solid #ded9e4;
+  border-radius: 0.9rem;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(30, 41, 59, 0.05);
+}
+
+.contact-form label {
+  margin-top: 0.55rem;
+  color: #3f4756;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #d9d2df;
+  border-radius: 0.55rem;
+  background: #ffffff;
+  color: #172033;
+  font: inherit;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a77db7;
+  box-shadow: 0 0 0 3px rgba(167, 125, 183, 0.15);
+}
+
+.contact-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+  padding: 0.78rem 1rem;
+  border: 1px solid #7a6594;
+  border-radius: 0.55rem;
+  background: #7a6594;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.contact-form button:hover {
+  background: #664f81;
+  transform: translateY(-2px);
+}
+
+body[data-bs-theme="dark"] .contact-section {
+  color: #f2edf3;
+}
+
+body[data-bs-theme="dark"] .contact-section__eyebrow {
+  color: #d6b9e3;
+}
+
+body[data-bs-theme="dark"] .contact-section__intro > p:last-child,
+body[data-bs-theme="dark"] .coffee-chat p {
+  color: #c8becb;
+}
+
+body[data-bs-theme="dark"] .contact-email {
+  color: #b8c9e8;
+}
+
+body[data-bs-theme="dark"] .coffee-chat {
+  border-color: #4b4149;
+  background: #2a262c;
+}
+
+body[data-bs-theme="dark"] .coffee-chat__icon {
+  background: #403139;
+  color: #efbdcd;
+}
+
+body[data-bs-theme="dark"] .coffee-chat a {
+  color: #d6b9e3;
+}
+
+body[data-bs-theme="dark"] .contact-form {
+  border-color: #47414c;
+  background: #29262d;
+  box-shadow: none;
+}
+
+body[data-bs-theme="dark"] .contact-form label {
+  color: #e2dce5;
+}
+
+body[data-bs-theme="dark"] .contact-form input,
+body[data-bs-theme="dark"] .contact-form textarea {
+  border-color: #4d4651;
+  background: #211f24;
+  color: #f2edf3;
+}
+
+body[data-bs-theme="dark"] .contact-form input:focus,
+body[data-bs-theme="dark"] .contact-form textarea:focus {
+  border-color: #c9abd5;
+  box-shadow: 0 0 0 3px rgba(201, 171, 213, 0.16);
+}
+
+body[data-bs-theme="dark"] .contact-form button {
+  border-color: #c8acd5;
+  background: #c8acd5;
+  color: #241f27;
+}
+
+body[data-bs-theme="dark"] .contact-form button:hover {
+  background: #d8bee2;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 5rem 1.25rem;
+  }
+
+  .contact-section__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-form button {
+    transition: none;
+  }
+
+  .contact-form button:hover {
+    transform: none;
+  }
+}

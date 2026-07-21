@@ -5,6 +5,55 @@ import pawnshop from '../assets/pawn shop.jpg'
 import extention from '../assets/chrome-extention.jpg';
 import chatbot from '../assets/chatbot.jpg';
 import imageSlider from '../assets/image-slider.png';
+import "./projects.css";
+
+const featuredProjects = [
+  {
+    title: "Project One",
+    category: "Backend System",
+    summary:
+      "Add a one-line description of the real problem this project solves.",
+    problem:
+      "Describe the user, business, or engineering problem that needed solving.",
+    approach:
+      "Describe the backend architecture, APIs, data flow, or key implementation approach.",
+    decision:
+      "Describe one meaningful technical, reliability, security, or performance decision.",
+    tech: ["Java", "Spring Boot", "PostgreSQL", "REST APIs"],
+    repositoryUrl: "#",
+    demoUrl: "",
+  },
+  {
+    title: "Project Two",
+    category: "Full-Stack Application",
+    summary:
+      "Add a short outcome-led description of this project.",
+    problem:
+      "Describe the practical problem or workflow you built this for.",
+    approach:
+      "Describe the system design, database work, integrations, or application flow.",
+    decision:
+      "Describe the hardest technical challenge and how you handled it.",
+    tech: ["Java", "SQL", "Azure", "React"],
+    repositoryUrl: "#",
+    demoUrl: "",
+  },
+  {
+    title: "Project Three",
+    category: "Integration / Platform",
+    summary:
+      "Add a short description that makes the project worth opening.",
+    problem:
+      "Describe the problem, constraints, and intended users.",
+    approach:
+      "Describe the APIs, services, security model, or data-processing approach.",
+    decision:
+      "Describe one engineering trade-off or decision you are proud of.",
+    tech: ["Spring Boot", "Oracle", "Git", "Monitoring"],
+    repositoryUrl: "#",
+    demoUrl: "",
+  },
+];
 
 // My Projects
 
@@ -18,6 +67,63 @@ function Projects(){
     <div class="page-header text-center p-4">
       <h2>PROJECTS</h2><hr/><br/>
     </div>
+    <section className="featured-projects" aria-labelledby="featured-projects-heading">
+  <div className="featured-projects__intro">
+    <p className="featured-projects__eyebrow">Selected work</p>
+    <h3 id="featured-projects-heading">Engineering case studies</h3>
+    <p>
+      A closer look at systems, integrations, and applications I have built.
+    </p>
+  </div>
+
+  <div className="featured-projects__grid">
+    {featuredProjects.map((project) => (
+      <article className="featured-project-card" key={project.title}>
+        <div className="featured-project-card__header">
+          <p>{project.category}</p>
+          <h4>{project.title}</h4>
+        </div>
+
+        <p className="featured-project-card__summary">{project.summary}</p>
+
+        <div className="featured-project-card__details">
+          <div>
+            <h5>Problem</h5>
+            <p>{project.problem}</p>
+          </div>
+
+          <div>
+            <h5>Engineering approach</h5>
+            <p>{project.approach}</p>
+          </div>
+
+          <div>
+            <h5>Key decision</h5>
+            <p>{project.decision}</p>
+          </div>
+        </div>
+
+        <ul className="featured-project-card__tech">
+          {project.tech.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+
+        <div className="featured-project-card__links">
+          <a href={project.repositoryUrl} target="_blank" rel="noreferrer">
+            Repository →
+          </a>
+
+          {project.demoUrl && (
+            <a href={project.demoUrl} target="_blank" rel="noreferrer">
+              Live demo →
+            </a>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
     {/* projects here */}
 <div class="row row-cols-1 row-cols-md-2"> 
   {/* Virtual Art Gallary */}

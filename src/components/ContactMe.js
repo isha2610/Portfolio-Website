@@ -1,149 +1,117 @@
-import React from "react";
-// import { useState } from 'react';
-import emailjs from '@emailjs/browser';
-// import Swal from "sweetalert2";
-// import emailjs from "emailjs-com";
-import { Form, Input, TextArea, Button } from "semantic-ui-react";
-// import "./App.css";
+import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
-
-// service id - service_o8ukegq
-// service_o8ukegq
-
-// Email Connect
+import { Coffee, Mail, Send } from "lucide-react";
+import "./contact.css";
 
 const SERVICE_ID = "service_o8ukegq";
 const TEMPLATE_ID = "template_zg0gyqi";
-const PUBLIC_KEY = "_4lh9OUJLl7Y1YLTt";
+const PUBLIC_KEY = "_4lh9OUJLl7YLTt";
 
 const ContactMe = () => {
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
 
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-      .then((result) => {
-        console.log(result.text);
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, event.target, PUBLIC_KEY)
+      .then(() => {
         Swal.fire({
           icon: "success",
-          title: "Message Sent Successfully"
-        })
-      }, (error) => {
-        console.log(error.text);
+          title: "Message sent successfully",
+        });
+
+        event.target.reset();
+      })
+      .catch((error) => {
         Swal.fire({
           icon: "error",
-          title: "Ooops, something went wrong",
+          title: "Something went wrong",
           text: error.text,
-        })
+        });
       });
-    e.target.reset()
   };
-/*
+
   return (
-    <div className="App">
-      <Form onSubmit={handleOnSubmit}>
-        <Form.Field
-          id="form-input-control-email"
-          control={Input}
-          label="Email"
-          name="user_email"
-          placeholder="Email…"
-          required
-          icon="mail"
-          iconPosition="left"
-        />
-        <Form.Field
-          id="form-input-control-last-name"
-          control={Input}
-          label="Name"
-          name="user_name"
-          placeholder="Name…"
-          required
-          icon="user circle"
-          iconPosition="left"
-        />
-        <Form.Field
-          id="form-textarea-control-opinion"
-          control={TextArea}
-          label="Message"
-          name="user_message"
-          placeholder="Message…"
-          required
-        />
-        <Button type="submit" color="green">Submit</Button>
-      </Form>
-    </div>
-  );
+    <section className="contact-section" aria-labelledby="contact-heading">
+      <div className="contact-section__intro">
+        <p className="contact-section__eyebrow">Get in touch</p>
 
+        <h2 id="contact-heading">Let&apos;s connect</h2>
 
-
-
-  /*
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [stateMessage, setStateMessage] = useState(null);
-  const sendEmail = (e) => {
-    e.persist();
-    e.preventDefault();
-    setIsSubmitting(true);
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          setStateMessage('Message sent!');
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
-        },
-        (error) => {
-          setStateMessage('Something went wrong, please try again later');
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
-        }
-      );
-    
-    // Clears the form after sending the email
-    e.target.reset();
-  };
-    */
-
-
-    return(
-    <div>
-        <div class="page-header text-center p-4">
-          <h2>CONTACT ME</h2><hr/>
-          <p style={{justifyItems:"center"}}>Hey..! Would love to know more or have any feedback. Let's connect..!</p>
-        </div>
-      <div class="container-fluid d-flex justify-content-center">
-        <div className="container-fluid d-flex justify-content-center flex-column align-items-center w-100">
-          <form style={{ paddingTop: 20 }} className="w-25" onSubmit={handleOnSubmit}>
-            <div class="mb-3">
-              <label class="form-label">Name</label>
-              <input type="text" class="form-control" placeholder="John Doe" required style={{ paddingRight: 100 }}/>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-control" placeholder="example@example.com" required style={{ paddingRight: 100 }}
-              />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Your Message</label>
-              <textarea type="text" class="form-control" placeholder="Your message here..." required style={{ paddingRight: 100 }}
-              />
-            </div>
-            <button type="submit" value="send" class="btn btn-secondary" > Send Email </button>
-            {/* {stateMessage && <p>{stateMessage}</p>} disabled={isSubmitting} */} 
-          </form>
-        </div>
+        <p>
+          Have an engineering opportunity, a collaboration idea, or feedback to
+          share? I&apos;d be happy to hear from you.
+        </p>
       </div>
-    </div>
-    );
-    
+
+      <div className="contact-section__grid">
+        <div className="contact-section__details">
+          <a
+            className="contact-email"
+            href="mailto:khuranaisha00@gmail.com"
+          >
+            <Mail size={20} aria-hidden="true" />
+            khuranaisha00@gmail.com
+          </a>
+
+          <div className="coffee-chat">
+            <span className="coffee-chat__icon" aria-hidden="true">
+              <Coffee size={22} />
+            </span>
+
+            <div>
+              <h3>Coffee chat?</h3>
+              <p>
+                Open to thoughtful engineering conversations, collaboration,
+                and a good cup of coffee.
+              </p>
+
+              <a
+                href="mailto:khuranaisha00@gmail.com?subject=Coffee%20chat%20with%20Isha"
+              >
+                Let&apos;s grab a virtual coffee →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form className="contact-form" onSubmit={handleOnSubmit}>
+          <label htmlFor="contact-name">Name</label>
+          <input
+            id="contact-name"
+            name="user_name"
+            type="text"
+            autoComplete="name"
+            placeholder="Your name"
+            required
+          />
+
+          <label htmlFor="contact-email">Email</label>
+          <input
+            id="contact-email"
+            name="user_email"
+            type="email"
+            autoComplete="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label htmlFor="contact-message">Message</label>
+          <textarea
+            id="contact-message"
+            name="user_message"
+            rows="5"
+            placeholder="What would you like to discuss?"
+            required
+          />
+
+          <button type="submit">
+            Send message
+            <Send size={17} aria-hidden="true" />
+          </button>
+        </form>
+      </div>
+    </section>
+  );
 };
+
 export default ContactMe;

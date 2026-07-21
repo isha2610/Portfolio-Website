@@ -1,101 +1,97 @@
-import React from "react";
-import cpp from "../assets/skills/cpp.png";
-import azure from "../assets/skills/azure.png";
-import Bitrix24 from "../assets/skills/Bitrix24.png";
-import Java from "../assets/skills/java.png";
-import mongodb from "../assets/skills/mongodb.png";
-import php from "../assets/skills/php.png";
-import reactjs from "../assets/skills/reactjs.png";
-import splunk from "../assets/skills/splunk.png";
-import sql from "../assets/skills/sql.png";
-import sdlc from "../assets/skills/sdlc.png";
-import dsa from "../assets/skills/dsa.png";
-import git from "../assets/skills/git.png";
+import {
+  Activity,
+  Code2,
+  Database,
+  GitBranch,
+  Network,
+  Server,
+} from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import "./skills.css";
 
-// import { Link } from "react-router-dom";
-
-//Skills GRID
+const skillGroups = [
+  {
+    title: "Backend Engineering",
+    icon: Server,
+    skills: ["Spring Boot", "Microservices", "REST APIs"],
+  },
+  {
+    title: "Data Platforms",
+    icon: Database,
+    skills: ["SQL", "Oracle", "PostgreSQL"],
+  },
+  {
+    title: "Observability",
+    icon: Activity,
+    skills: ["Splunk Cloud", "Logging", "Monitoring"],
+  },
+  {
+    title: "Engineering Practices",
+    icon: Network,
+    skills: ["System Design", "Data Structures & Algorithms"],
+  },
+  {
+    title: "Developer Workflow",
+    icon: GitBranch,
+    skills: ["Git", "GitHub"],
+  },
+  {
+    title: "Languages",
+    icon: Code2,
+    skills: ["Java", "C++"],
+  },
+];
 
 function Skill() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div>
-      <div class="page-header text-center p-4">
-        <h2>SKILLS</h2>
-        <hr/>
-        <div class="container text-center">
-          <div class="row row-cols-4 py-4">
-            <div class="col"><img src={cpp} class="img-thumbnail p-2" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={azure} class="img-thumbnail p-2" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={Java} class="img-thumbnail p-2" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={Bitrix24} class="img-thumbnail p-2" width={100} height={100} alt="..."/></div>
-          </div>
-          <div class="row row-cols-4 py-4">
-            <div class="col"><img src={mongodb} class="img-thumbnail p-2" width={100} height={100}alt="..."/></div>
-            <div class="col"><img src={php} class="img-thumbnail p-2" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={reactjs} class="img-thumbnail p-2" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={sql} class="img-thumbnail p-2" width={100} height={100} alt="..."/></div>
-          </div>  
-          <div class="row row-cols-4 py-4">
-            <div class="col"><img src={splunk} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={dsa} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={sdlc} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={git} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-          </div>
-          {/* <div class="row row-cols-4 py-4">
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-          </div> */}
-          {/* <div class="row row-cols-4 py-4">
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-          </div>
-          <div class="row row-cols-4 py-4">
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-            <div class="col"><img src={image1} class="img-thumbnail" width={100} height={100} alt="..."/></div>
-          </div> */}
-        </div>
+    <section className="skills-section" aria-labelledby="skills-heading">
+      <div className="skills-section__intro">
+        <p className="skills-section__eyebrow">Engineering toolkit</p>
 
-        {/* <p style={{ justifyItems: "center" }}>
-          Hey, want to get your website built? <br /> Want to discuss about
-          recruitment?
-          <br/>
-          Let's discuss here...
-        </p> */}
-        {/* <div class="container">
-          <div class="row">
-            <div class="col">
-              <img src={image} />
-            </div>
-            <div class="col">
-              <img src={image} />
-            </div>
-            <div class="col">
-              <img src={image} />
-            </div>
-          </div> */}
+        <h2 id="skills-heading">
+          Technologies I use to build production systems
+        </h2>
 
-        {/* <div class="container">
-            <div class="row">
-              <div class="col">
-                <img src={image} />
-              </div>
-              <div class="col">
-                <img src={image} />
-              </div>
-              <div class="col">
-                <img src={image} />
-              </div>
-            </div> */}
-        {/* </div> */}
-        {/* </div> */}
+        <p className="skills-section__description">
+          Developed through shipping software, debugging failures, and improving
+          real-world systems.
+        </p>
       </div>
-    </div>
+
+      <div className="skills-section__grid">
+        {skillGroups.map((group, index) => {
+          const Icon = group.icon;
+
+          return (
+            <motion.article
+              className="skill-card"
+              key={group.title}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={
+                shouldReduceMotion ? undefined : { opacity: 1, y: 0 }
+              }
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.42, delay: index * 0.06 }}
+            >
+              <span className="skill-card__icon" aria-hidden="true">
+                <Icon size={20} strokeWidth={1.8} />
+              </span>
+
+              <h3>{group.title}</h3>
+
+              <ul className="skill-card__list">
+                {group.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </motion.article>
+          );
+        })}
+      </div>
+    </section>
   );
 }
+
 export default Skill;

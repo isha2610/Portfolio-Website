@@ -1,0 +1,224 @@
+.skills-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 7rem 1.5rem;
+  color: #172033;
+}
+
+.skills-section__intro {
+  max-width: 720px;
+}
+
+.skills-section__eyebrow {
+  margin: 0 0 0.75rem;
+  color: #53637a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.skills-section h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.skills-section__description {
+  margin: 1.25rem 0 0;
+  color: #5b6678;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.skills-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.skill-card {
+  min-height: 190px;
+  padding: 1.45rem;
+  border: 1px solid #dbe3ee;
+  border-radius: 0.9rem;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(30, 41, 59, 0.04);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.skill-card:hover {
+  border-color: #b8c9dc;
+  box-shadow: 0 15px 30px rgba(30, 41, 59, 0.09);
+  transform: translateY(-4px);
+}
+
+.skill-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.65rem;
+  background: #edf4fb;
+  color: #315c8d;
+}
+
+.skill-card h3 {
+  margin: 1.15rem 0 0;
+  color: #263247;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.skill-card__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-card__list li {
+  padding: 0.36rem 0.62rem;
+  border: 1px solid #dbe3ee;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #405067;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+body[data-bs-theme="dark"] .skills-section {
+  color: #edf2f7;
+}
+
+body[data-bs-theme="dark"] .skills-section__eyebrow {
+  color: #aebbd0;
+}
+
+body[data-bs-theme="dark"] .skills-section__description {
+  color: #bdc8d8;
+}
+
+body[data-bs-theme="dark"] .skill-card {
+  border-color: #334155;
+  background: #1e293b;
+  box-shadow: none;
+}
+
+body[data-bs-theme="dark"] .skill-card:hover {
+  border-color: #55739a;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+body[data-bs-theme="dark"] .skill-card__icon {
+  background: #263b55;
+  color: #b8d4f2;
+}
+
+body[data-bs-theme="dark"] .skill-card h3 {
+  color: #f4f7fb;
+}
+
+body[data-bs-theme="dark"] .skill-card__list li {
+  border-color: #3a485a;
+  background: #172033;
+  color: #d2dbea;
+}
+
+@media (max-width: 900px) {
+  .skills-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 5rem 1.25rem;
+  }
+
+  .skills-section__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card {
+    transition: none;
+  }
+
+  .skill-card:hover {
+    transform: none;
+  }
+}
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  left: 1.2rem;
+  height: 3px;
+  border-radius: 999px;
+  background: #a9bddc;
+}
+
+.skill-card:nth-child(3n + 2)::before {
+  background: #c8acd5;
+}
+
+.skill-card:nth-child(3n)::before {
+  background: #ddaebe;
+}
+
+.skill-card:nth-child(3n + 2) .skill-card__icon {
+  background: #f4edf7;
+  color: #87679a;
+}
+
+.skill-card:nth-child(3n) .skill-card__icon {
+  background: #fbeef2;
+  color: #a9677d;
+}
+
+body[data-bs-theme="dark"] .skill-card {
+  border-color: #47414c;
+  background: #29262d;
+  box-shadow: none;
+}
+
+body[data-bs-theme="dark"] .skill-card:hover {
+  border-color: #675e6d;
+  background: #2d2931;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
+}
+
+body[data-bs-theme="dark"] .skill-card__icon {
+  background: #303846;
+  color: #b8c9e8;
+}
+
+body[data-bs-theme="dark"] .skill-card:nth-child(3n + 2) .skill-card__icon {
+  background: #3b3341;
+  color: #d6b9e3;
+}
+
+body[data-bs-theme="dark"] .skill-card:nth-child(3n) .skill-card__icon {
+  background: #403239;
+  color: #efbdcd;
+}
+
+body[data-bs-theme="dark"] .skill-card__list li {
+  border-color: #49434e;
+  background: #211f24;
+  color: #ded6e0;
+}
